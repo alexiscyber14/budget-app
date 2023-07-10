@@ -1,0 +1,27 @@
+<section class="form-logger">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="back-home">
+<div><button>
+<%= link_to root_path, class: "btn" do %>
+  <i class="fa fa-arrow-left"></i>
+<% end %>
+</button></div>
+<div class="login">Login</div>
+<div class="log-btn">
+<%= f.submit "Log in" %>
+</div>
+</div>
+<div class="form-wrapper">
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+  </div>
+<% end %>
+<div class="links-con">
+<%= link_to "Forgot password ?", new_password_path(resource_name) %>
+</div>
+</section>
