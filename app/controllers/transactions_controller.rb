@@ -12,7 +12,7 @@ class TransactionsController < ApplicationController
     @transaction = @category.transactions.build(transaction_params)
     @transaction.user = current_user # Set the user ID
     if @transaction.save
-      redirect_to category_path(@category), notice: "Transaction created successfully."
+      redirect_to category_path(@category), notice: 'Transaction created successfully.'
     else
       render :new
     end
