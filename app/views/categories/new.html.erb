@@ -1,4 +1,5 @@
-<h1>New Category</h1>
+<section class="ad-cat-screen">
+<%= link_to "Back", categories_path, class: "btn" %>
 
 <%= form_with(model: @category, url: categories_path) do |form| %>
   <% if @category.errors.any? %>
@@ -12,7 +13,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -20,11 +20,11 @@
 
   <div class="field">
     <%= form.label :icon %>
-    <%= form.text_field :icon %>
+    <%= form.text_field :icon, placeholder: "icon url link" %>
   </div>
 
   <div class="actions">
     <%= form.submit "Save" %>
-    <%= link_to "Back", categories_path, class: "btn" %>
   </div>
 <% end %>
+</section>

@@ -1,12 +1,18 @@
-<h1>Categories</h1>
-
+  <section class="cat-screen">
 <% @categories.each do |category| %>
-  <div class="category-item">
-    <%= image_tag category.icon %>
-    <h2><%= category.name %></h2>
-    <p>Total Amount: <%= number_to_currency(category.total_amount) %></p>
-    <%= link_to "View Transactions", category_path(category) %>
+  <%= link_to  category_path(category)  do %>
+  <div class="cat-item">
+  <div class="cat-image">
+  <%= image_tag category.icon %>
   </div>
+  <div class="cat-detail">
+  <h2><%= category.name %></h2>
+  <p>Total Amount: <%= number_to_currency(category.total_amount) %></p>
+  </div>  
+  </div>
+  <% end %>
 <% end %>
-
-<%= link_to "Add a new category", new_category_path, class: "btn" %>
+<div class="add-cat-btn">
+<%= link_to "Add category", new_category_path, class: "btn" %>
+</div>
+</section>

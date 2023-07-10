@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
     def show
       @transactions = @category.transactions.order(created_at: :desc)
       @total_amount = @category.total_amount
+      @oldest_transactions = @category.transactions.order(created_at: :asc)
     end
   
     def new

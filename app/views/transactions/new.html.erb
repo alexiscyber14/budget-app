@@ -1,5 +1,5 @@
-<h1>New Transaction</h1>
-
+<section class="ad-cat-screen">
+<%= link_to "Back", category_path(@category), class: "btn" %>
 <%= form_with(model: [@category, @transaction], url: category_transactions_path(@category)) do |form| %>
   <% if @transaction.errors.any? %>
     <div id="error_explanation">
@@ -25,11 +25,11 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.collection_select :category_id, current_user.categories, :id, :name %>
+    <%= form.collection_select :category_id, current_user.categories, :id, :name, { selected: @category.id }, {disabled: true} %>
   </div>
 
   <div class="actions">
     <%= form.submit "Save" %>
-    <%= link_to "Back", category_path(@category), class: "btn" %>
   </div>
 <% end %>
+</section>
