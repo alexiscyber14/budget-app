@@ -32,9 +32,5 @@ test:
 
 production:
   <<: *default
-  database:  fin
-  host: localhost
-  username: postgres
-  password: Starshine96
-  port: 5432
+  url: <%= ENV['DATABASE_URL'] %>
 
