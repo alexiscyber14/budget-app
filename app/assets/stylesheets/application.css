@@ -126,11 +126,29 @@ header nav .side-nav ul .user-p {
   align-items: center;
 }
 
+span {
+  margin: 0 15px;
+  line-height: 0.7;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+  animation: span 3s ease-in infinite alternate;
+}
+
+.intro-screen-title p span {
+  height: 10px;
+  border: 1px solid rgb(44, 44, 44);
+}
+
 header nav .side-nav ul .user-p span {
   height: 100px;
   background: rgba(255, 255, 255, 0.53);
   width: 100px;
   border-radius: 160px;
+}
+
+.intro-screen-title p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 0;
 }
 
 header nav .side-nav ul .user-p p {
@@ -252,13 +270,99 @@ header nav .side-nav ul li:last-child a {
 
 .intro-screen-title {
   position: absolute;
-  border: 2px solid green;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   top: 25%;
+  padding-top: 4%;
 }
+
+/* splash screen css */
+
+.intro-screen .slogan {
+  position: absolute;
+  top: 40%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.intro-screen .slogan::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  width: 20%;
+  border-radius: 6px;
+  border-bottom: 2px solid rgb(22, 77, 148);
+}
+
+.intro-screen .slogan::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 20%;
+  border-bottom: 2px solid rgb(22, 77, 148);
+}
+
+.notice {
+  font-size: 10px;
+  color: white;
+}
+
+.alert {
+  font-size: 10px;
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 42px;
+  background: #f7f7f7;
+
+  @media (max-width: 600px) { transform: scale(0.65); }
+}
+
+.letter {
+  display: inline-flex;
+  height: 25px;
+  width: 27px;
+
+  /* border: 2.5px solid #FF1EAD; */
+  border: 2.35px solid black;
+  border-radius: 14px;
+  box-shadow:
+    0 0 2px rgba(0, 0, 0, 0.75),
+    inset 0 0 2px rgba(0, 0, 0, 0.45);
+  animation: letter 3s ease-in-out infinite alternate;
+}
+
+@keyframes span {
+  0%,
+  30% { margin: 0 15px; }
+
+  70%,
+  100% { margin: 0 5px; }
+}
+
+@keyframes letter {
+  0%,
+  30% { width: 27px; }
+
+  70%,
+  100% { width: 30vw; }
+}
+
+/* end splash screen css  */
 
 .intro-screen-links {
   position: absolute;
