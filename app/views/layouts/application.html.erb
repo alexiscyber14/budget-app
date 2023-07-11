@@ -5,12 +5,48 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  
+
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+  
+  <p class="notice"></p>
+  <p class="alert"></p>
+  <header>
+  <nav>
+    <button id="nav-open"><i class="fa fa-bars"></i></button>
+    <% if current_page?(categories_path) %>
+      <button class="p-title">Categories</button>
+    <% elsif @category.try(:persisted?) && current_page?(category_path(@category)) %>
+      <button class="p-title">Transactions</button>
+    <% elsif @category.try(:persisted?) && current_page?(new_category_transaction_path(@category)) %>
+      <button class="p-title">Add Transaction</button>
+    <% elsif current_page?(new_category_path) %>
+      <button class="p-title">Add Category</button>
+    <% end %>
+    <button><i class="fa fa-search"></i></button>
+    <div class="side-nav" id="side-nav">
+    <div class="close">
+    <button id="nav-close"><i class="fa fa-caret-left"></i></button>
+    </div>
+    <ul>
+    <div class="user-p">
+    <span id="image"></span>
+    <p>Frank Ortman</p>
+    </div>
+    <li><button><i class="fa fa-cog"></i></button> <%= link_to "Account Settings" %></li>
+    <li><button><i class="fa fa-map-marker"></i></button><%= link_to "Merchant Finder" %></li>
+    <li><button><i class="fa fa-gift"></i></button><%= link_to "Claim Promo" %></li>
+    <li><button><i class="fa fa-share"></i></button><%= link_to "Share Promo", class: "no-b" %></li>
+    </ul>
+    </div>
+  </nav>
+</header>
     <%= yield %>
+    <%= javascript_include_tag 'customs' %>
   </body>
 </html>

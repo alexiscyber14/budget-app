@@ -1,0 +1,41 @@
+<div class="t-head">
+<div class="t-nav">
+<button class="window-switch active-switch">Most recent</button>
+<button class="window-switch" >Most ancient</button>
+</div>
+</div>
+<section class="t-screen">
+<%= link_to "Back", categories_path, class: "btn" %>
+<div class="t-head-detail">
+<h2>Total Amount: <%= number_to_currency(@total_amount) %></h2>
+</div>
+<div class="window active-window">
+<% @transactions.each do |transaction| %>
+  <div class="t-item">
+  <div class="t-image">
+  <%= image_tag transaction.category.icon %>
+  </div>
+  <div class="t-detail">
+    <p><%= transaction.name %> <span><%= number_to_currency(transaction.amount) %></span></p>
+    <span class="spana"><%= transaction.created_at %></span>
+  </div>
+  </div>
+ <% end %>
+ </div>
+ <div class="window ">
+ <% @oldest_transactions.each do |transaction| %>
+  <div class="t-item">
+  <div class="t-image">
+  <%= image_tag transaction.category.icon %>
+  </div>
+  <div class="t-detail">
+    <p><%= transaction.name %> <span><%= number_to_currency(transaction.amount) %></span></p>
+    <span class="spana"><%= transaction.created_at %></span>
+  </div>
+  </div>
+ <% end %>
+ </div>
+ <div class="add-cat-btn">
+<%= link_to "Add a transaction", new_category_transaction_path(@category), class: "btn" %>
+</div>
+</section>

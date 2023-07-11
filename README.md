@@ -1,11 +1,13 @@
 <div align="center">
-  <h3><b>Ruby Blog web app</b></h3>
+  <h3><b>Ruby Budget App</b></h3>
 </div>
 
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
+    - [Live Demo](#live-demo)
+    - [Presentation](#presentation)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
@@ -23,9 +25,18 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Ruby Blog web app <a name="about-project"></a>
+# 📖 Ruby Budget app <a name="about-project"></a>
 
-**Ruby Blog web apps** is a project implementing a blogging platform with four interconnected tables: Comment, User, Post, and Like. Users can create posts, comment on posts, and like posts. Each entity has attributes such as name, photo, bio, title, text, and counters for comments and likes. Associations between models are established, allowing easy retrieval of related data. The project includes custom methods to retrieve recent comments and update counters. Built using the power of Rails framework to enable efficient CRUD operations and seamless interaction with the database.
+**Ruby Budget app** keeps track of all your expenses, It shows you a list of transactions and a list of categories you have spet your money on and the total amount you have spent on a category.
+
+### Live Demo <a name="live-demo"></a>
+
+<a href="https://budget-2so2.onrender.com/">SEE LIVE DEMO</a>
+
+
+### Presentation <a name="presentation"></a>
+<a href="https://drive.google.com/file/d/1xMK00wtOY76OqycY8OnX9VgaVZqhzwlR/view?usp=sharing">App Presentation</a>
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -40,27 +51,23 @@
 
 ### Key Features <a name="key-features"></a>
 
--**[User Management: The project includes a User model with features for creating and managing user accounts. Users can register, log in, and perform actions specific to their account.]**
+-**[User Management: The budget app includes a User model with features for creating and managing user accounts. Users can register, log in, and perform actions specific to their account.]**
 
--**[Post Creation: Users can create new posts with a title and text content. Posts are associated with the user who created them, allowing for easy retrieval and organization.]**
+-**[Category Management: Users can create, view, update, and delete categories for organizing their transactions. Each category is associated with the user who created it.]**
 
--**[Commenting System: Users can leave comments on posts, fostering engagement and discussion. Comments are associated with the post they belong to and include attributes such as the author's ID, text, and timestamps.]**
+-**[Transaction Tracking: Users can create transactions with a name and amount, and associate them with a specific category. The app provides features for creating, viewing, updating, and deleting transactions.]**
 
--**[Like Functionality: Users can express their appreciation for posts by liking them. Likes are associated with both the post and the user who initiated the like.]**
+-**[Total Amount Calculation: The app calculates and displays the total amount for each category based on the sum of the transaction amounts associated with it.]**
 
--**[Counters: The project incorporates counters to track the number of comments and likes for each post. These counters are automatically updated when new comments or likes are added, providing valuable insights into post popularity.]**
+-**[Secure Authentication: The budget app utilizes secure authentication mechanisms provided by Ruby on Rails, ensuring the privacy and security of user accounts and data.]**
 
--**[Recent Comments: The project includes a custom method that retrieves the most recent comments for a given post. This feature allows users to view and engage with the latest discussions.]**
+-**[Data Persistence: The app leverages the power of Ruby on Rails to perform Create, Read, Update, and Delete (CRUD) operations on categories and transactions, allowing users to easily manage and manipulate their budget data.]**
 
--**[Data Associations: The tables (Comment, User, Post, and Like) are linked through associations, enabling seamless navigation and retrieval of related data. These associations enhance the project's functionality and facilitate efficient data management.]**
+-**[Intuitive User Interface: The budget app features a user-friendly interface that makes it easy for users to navigate, create, and manage their budget categories and transactions.]**
 
--**[CRUD Operations: The project leverages the power of Ruby on Rails to perform Create, Read, Update, and Delete (CRUD) operations on the entities. This allows for easy management and manipulation of data throughout the application.]**
-
--**[Robust Framework: Built using the Ruby on Rails framework, the project benefits from its convention-over-configuration approach, providing a solid foundation for developing scalable and maintainable web applications.]**
+-**[Scalable and Maintainable: Developed using the Ruby on Rails framework, the budget app benefits from its robust and scalable architecture, enabling future enhancements and easy maintenance.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -85,7 +92,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/alexiscyber14/ruby_on_rails_blog_app.git
+  git clone https://github.com/alexiscyber14/budget-app.git
 ```
 
 ### Install <a name="install">
@@ -116,11 +123,6 @@ rspec spec
 - LinkedIn:[@Alex_Ssenyoondo](https://www.linkedin.com/in/alex-software/)
 - wellfound:[@alexiscyber14](https://angel.co/u/alexander-senyondo)
 
-👤 **Samson**
-
-- GitHub: [@SamTush](https://github.com/SamTush)
-- LinkedIn:[@SamTush](https://www.linkedin.com/in/samsontush/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- FUTURE FEATURES -->
 
@@ -128,13 +130,13 @@ rspec spec
 
 Here are some potential future features that can be added to enhance the functionality of the classes:
 
--[]**User Profiles: Enhance the project by implementing user profiles, where users can customize their profile information, upload profile pictures, and provide additional details about themselves. This feature can encourage user engagement and personalization within the blogging platform.**
+-[]**Budget Planning and Tracking: Enhance the app by adding features for budget planning and tracking. Users can set monthly or weekly budgets for each category and track their spending against the budgeted amounts. The app can provide visualizations and alerts to help users stay within their budget.**
 
--[]**Social Media Integration: Integrate social media sharing functionality to allow users to share posts they find interesting or valuable on popular social media platforms. This feature can help expand the reach of the blog content and increase its visibility.**
+-[]**Expense Categorization and Insights: Allow users to categorize their expenses within each transaction. Users can assign tags or labels to transactions, enabling them to gain insights into their spending patterns and identify areas for potential savings. The app can provide analytics and reports based on the categorized expenses.**
 
--[]**Tagging System: Implement a tagging system that allows users to assign relevant tags to their posts. This feature enables better organization and categorization of posts, making it easier for users to discover content on specific topics of interest.**
+-[]**Expense Reminders and Notifications: Implement features for setting reminders and notifications related to transactions and budget deadlines. Users can receive alerts when bills are due, when they have reached certain spending thresholds, or when they have upcoming financial goals or milestones.**
 
--[]**Notifications: Develop a notification system that notifies users about new comments, likes, or interactions on their posts. This feature keeps users engaged and informed about the activity surrounding their content, fostering a sense of community and encouraging further interaction.**
+-[]**Integration with Financial Institutions: Enable users to connect their bank accounts or credit cards to the app. This integration can automatically import transaction data, eliminating the need for manual entry. It can provide real-time updates and reconciliation of transactions, ensuring accurate and up-to-date financial records.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +144,7 @@ Here are some potential future features that can be added to enhance the functio
 
 Contributions, and feature requests are welcome!
 
-Feel free to check the [project](https://github.com/alexiscyber14/ruby_on_rails_blog_app.git).
+Feel free to check the [project](https://github.com/alexiscyber14/budget-app.git).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
