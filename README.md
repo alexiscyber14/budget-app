@@ -25,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Ruby Recipe web app <a name="about-project"></a>
+# 📖 Ruby Budget app <a name="about-project"></a>
 
 **Ruby Budget app** keeps track of all your expenses, It shows you a list of transactions and a list of categories you have spet your money on and the total amount you have spent on a category.
 
