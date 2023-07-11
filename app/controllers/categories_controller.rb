@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:id])
     @transactions = @category.transactions.order(created_at: :desc)
     @total_amount = @category.total_amount
     @oldest_transactions = @category.transactions.order(created_at: :asc)
