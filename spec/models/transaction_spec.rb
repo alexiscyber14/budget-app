@@ -15,8 +15,6 @@ RSpec.describe Transaction, type: :model do
     end
   end
 
-
-
   describe 'creating a transaction' do
     it 'is valid with valid attributes' do
       transaction = Transaction.new(
